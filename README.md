@@ -1,7 +1,7 @@
+
+# EX 04 MONITORING SOIL MOISTURE VALUE IN THINGS SPEAK CLOUD
 ### NAME : Bharath D
 ### REG NO : 212224240025
-# EX 04 MONITORING SOIL MOISTURE VALUE IN THINGS SPEAK CLOUD
-
 
 # AIM:
 To monitor the soil moisture value in the Thing speak cloud using soil moisture sensor and ESP32 controller.
