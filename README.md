@@ -1,8 +1,7 @@
-Name: bharath D
+### NAME : Bharath D
+### REG NO : 212224240025
+# EX 04 MONITORING SOIL MOISTURE VALUE IN THINGS SPEAK CLOUD
 
-Reg No:24900875
-
-EXP NO 5 Monitoring-soil-moisture-value-in-Thing-speak-cloud
 
 # AIM:
 To monitor the soil moisture value in the Thing speak cloud using soil moisture sensor and ESP32 controller.
@@ -89,31 +88,34 @@ Prototype and build IoT systems without setting up servers or developing web sof
 # PROGRAM:
 ```
 #include <WiFi.h>
-#include "ThingSpeak.h" 
+#include "ThingSpeak.h"
+
 #define Soil_Moisture 34
-char ssid[] = "Akshay";
-char pass[] = "Loid D Ackerman :)";
-int keyIndex = 0;
-WiFiClient  client;
 
-unsigned long myChannelNumber = 2792150;
-const int ChannelField = 1; 
-const char * myWriteAPIKey = "0QH0SFYRBXCSUQUY";
+char ssid[] = "Sivaahhhh";
+char pass[] = "12345678";
 
-const int airValue = 4095; 
+WiFiClient client;
+
+unsigned long myChannelNumber = 3473297;
+const int ChannelField = 1;
+const char * myWriteAPIKey = "44OX9037FXLTCQ0E";
+
+const int airValue = 4095;
 const int waterValue = 0;
-int percentage =0;
+int percentage = 0;
+
 void setup() {
-  Serial.begin(115200);
-  pinMode(Soil_Moisture, INPUT);
-  WiFi.mode(WIFI_STA);   
-  ThingSpeak.begin(client);
+   Serial.begin(115200);
+   pinMode(Soil_Moisture, INPUT);
+   WiFi.mode(WIFI_STA);
+   ThingSpeak.begin(client);
+
 }
 
-void loop()
-{
- if (WiFi.status() != WL_CONNECTED)
-  {
+void loop() {
+   if (WiFi.status() != WL_CONNECTED)
+   {
     Serial.print("Attempting to connect to SSID: ");
     Serial.println(ssid);
     while (WiFi.status() != WL_CONNECTED)
@@ -123,29 +125,23 @@ void loop()
       delay(5000);
     }
     Serial.println("\nConnected.");
-  }
 
-  int Soil_Value = analogRead(Soil_Moisture);
-  percentage = map(Soil_Value, airValue, waterValue, 0, 100);
-
-  percentage = constrain(percentage, 0, 100);
-  Serial.println("Soil moisture percentage");
-  Serial.println(percentage);
-  ThingSpeak.writeField(myChannelNumber, ChannelField, percentage, myWriteAPIKey);
-  
-   delay(5000);
 }
 
+int Soil_Value = analogRead(Soil_Moisture);
+percentage = map(Soil_Value, airValue, waterValue, 0, 100);
+
+percentage = constrain(percentage, 0, 100);
+Serial.println("Soil Moisture percentage");
+Serial.println(percentage);
+ThingSpeak.writeField(myChannelNumber, ChannelField, percentage, myWriteAPIKey);
+delay(5000);
+}
 ```
-
-# CIRCUIT DIAGRAM:
-![image](https://github.com/user-attachments/assets/c38e8037-1b4a-42e3-afa6-b1d4f0530a2b)
-
 # OUTPUT:
-![image](https://github.com/user-attachments/assets/bd515728-88fb-4867-ac72-0c43338e8c2a)
-
-![image](https://github.com/user-attachments/assets/60c7420a-f4bd-47db-87cc-b67d608c13e4)
-
+<img width="1917" height="1196" alt="Screenshot 2026-08-28 135521" src="https://github.com/user-attachments/assets/44b9ec9f-430b-47b3-a660-30efffccec52" />
+<img width="1586" height="992" alt="moiture" src="https://github.com/user-attachments/assets/bbd0ce18-2fe3-4651-9aad-b3840117e751" />
+<img width="1280" height="960" alt="photo_2026-09-05_13-36-46" src="https://github.com/user-attachments/assets/66a85540-b66d-4170-8fa2-1bf942726b53" />
 
 # RESULT:
 Thus the soil moisture values are updated in the Thing speak cloud using ESP32 controller.
