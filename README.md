@@ -140,7 +140,7 @@ delay(5000);
 ```
 # OUTPUT:
 <img width="1917" height="1196" alt="Screenshot 2026-08-28 135521" src="https://github.com/user-attachments/assets/44b9ec9f-430b-47b3-a660-30efffccec52" />
-<img width="1586" height="992" alt="moiture" src="https://github.com/user-attachments/assets/bbd0ce18-2fe3-4651-9aad-b3840117e751" />
+<img width="1891" height="967" alt="image" src="https://github.com/user-attachments/assets/d8fe6506-7ebd-4ca9-b411-3e382f15f03c" />
 <img width="1280" height="960" alt="photo_2026-09-05_13-36-46" src="https://github.com/user-attachments/assets/66a85540-b66d-4170-8fa2-1bf942726b53" />
 
 # RESULT:
