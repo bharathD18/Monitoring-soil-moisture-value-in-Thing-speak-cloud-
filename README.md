@@ -92,7 +92,7 @@ Prototype and build IoT systems without setting up servers or developing web sof
 
 #define Soil_Moisture 34
 
-char ssid[] = "bharath";
+char ssid[] = "sivahhhh";
 char pass[] = "12345678";
 
 WiFiClient client;
